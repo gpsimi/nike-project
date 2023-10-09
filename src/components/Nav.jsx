@@ -27,6 +27,19 @@ export default function  Nav()  {
                 </li>
               ))}
             </ul>
+            <div>
+              <button>
+                
+              </button>
+            </div>
+            <div className="hidden max-lg:block cursor-pointer">
+              <img 
+                src={hamburger} 
+                alt="Hamburger"
+                width={25}
+                height={25}
+              />
+            </div>
         </nav>
     </header>
   )
