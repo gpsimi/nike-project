@@ -1,6 +1,10 @@
 const SuperQuality = () => {
   return (
-    <div>SuperQuality</div>
+    <section 
+      id="about-us"
+    >
+      SuperQuality
+    </section>
   )
 }
 
