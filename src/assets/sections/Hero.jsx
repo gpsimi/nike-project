@@ -1,5 +1,6 @@
 import Button from "../../components/Button"
-import { statistics } from "../../constants"
+import ShoeCard from "../../components/ShoeCard"
+import { shoes, statistics } from "../../constants"
 import { arrowRight } from "../icons"
 import { bigShoe1 } from "../images"
 
@@ -7,7 +8,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="w-full p-2 xl:flex-row flex-col justify-center min-h-screen gap-10 max-container"
+      className="w-full p- flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container"
     >
       <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-28">
         <p className="text-xl font-montserrat text-coral-red">Our Summer Collection</p>
@@ -34,10 +35,26 @@ const Hero = () => {
         </div>
       </div>
 
-      <div>
+      <div className="relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-primary bg-hero bg-cover bg-center">
         <img 
           src={bigShoe1} 
-          alt="" />
+          alt="shoe collection"
+          width={610} 
+          height={500}
+          className="object-contain relative z-10"
+        />
+        <div>
+          {shoes.map((shoe) => (
+          <div key={shoe}>
+              <ShoeCard 
+                imgURL={shoe}
+                changeBigShoeImage=
+                {() => {}}
+                bigShoeImg=""
+              />
+            </div>
+           ))}
+        </div>
       </div>
     </section>
   )
