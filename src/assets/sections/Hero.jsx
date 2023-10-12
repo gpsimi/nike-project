@@ -1,4 +1,5 @@
 import Button from "../../components/Button"
+import { statistics } from "../../constants"
 import { arrowRight } from "../icons"
 
 const Hero = () => {
@@ -8,7 +9,7 @@ const Hero = () => {
       className="w-full p-2 xl:flex-row flex-col justify-center min-h-screen gap-10 max-container"
     >
       <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-28">
-        <p>Our Summer Collection</p>
+        <p className="text-xl font-montserrat text-coral-red">Our Summer Collection</p>
         <h1>
           <span>The New Arrival</span>
           <br />
@@ -23,6 +24,14 @@ const Hero = () => {
           label="Shop Now"
           iconURL={arrowRight}
         />
+        <div className="flex justify-start items-start flex-wrap w-full mt-20 gap-16">
+          {statistics.map((stat) => (
+            <div key={stat.label}>
+              <p>{stat.value}</p>
+              <p>{stat.label}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )
