@@ -1,4 +1,4 @@
-// import React from 'react'
+import React from 'react'
 
 const Button = ( {label, iconURL, backgroundColor, textColor, borderColor, fullWidth } ) => {
   return (
